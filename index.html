@@ -106,6 +106,23 @@
   .eat .e p{color:var(--muted);font-size:.88rem;margin-bottom:.6em}
   .eat .e a{color:var(--gold);font-weight:700;font-size:.82rem;text-decoration:none}
 
+  /* ===== SUMMARY TABLE ===== */
+  .summary{background:#fff}
+  .sum-wrap{max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  table.itin{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
+  table.itin caption{display:none}
+  table.itin th,table.itin td{padding:16px 18px;text-align:left;vertical-align:top;border-bottom:1px solid #eee}
+  table.itin thead th{background:var(--ink);color:#fff;font-family:var(--serif);letter-spacing:.1em;font-weight:700}
+  table.itin .dayrow td{background:var(--gold);color:#1b2336;font-family:var(--serif);font-weight:800;letter-spacing:.15em;border-bottom:none}
+  table.itin td.time{white-space:nowrap;color:var(--gold);font-family:var(--serif);font-weight:700;width:140px}
+  table.itin td.act b{display:block;margin-bottom:.15em}
+  table.itin td.act span{color:var(--muted);font-size:.86rem}
+  table.itin tbody tr:not(.dayrow):hover{background:#faf7f1}
+  @media(max-width:620px){
+    table.itin th,table.itin td{padding:12px 12px;font-size:.86rem}
+    table.itin td.time{width:auto}
+  }
+
   .tint{background:var(--ink);color:var(--paper)}
   .tint .section-head h2,.tint .t-item h3{color:#fff}
   .tint .timeline .t-item p{color:#b9c0d0}
@@ -124,6 +141,7 @@
 <nav id="nav">
   <div class="brand">KANAZAWA <span>TRIP</span></div>
   <ul>
+    <li><a href="#summary">旅程</a></li>
     <li><a href="#day1">1日目</a></li>
     <li><a href="#day2">2日目</a></li>
     <li><a href="#day3">3日目</a></li>
@@ -141,6 +159,34 @@
   </div>
   <div class="scroll">SCROLL<i></i></div>
 </header>
+
+<!-- SUMMARY TABLE -->
+<section id="summary" class="summary">
+  <div class="section-head reveal">
+    <span class="day">ITINERARY</span>
+    <h2>旅程ひとめ表</h2>
+    <p>まずは3日間の流れをまとめて。詳しくは下にスクロール。</p>
+  </div>
+  <div class="sum-wrap reveal d1">
+    <table class="itin">
+      <thead><tr><th style="width:160px">時間</th><th>活動内容</th></tr></thead>
+      <tbody>
+        <tr class="dayrow"><td colspan="2">DAY 01 — 集合、そして金沢の夜へ</td></tr>
+        <tr><td class="time">12:00頃</td><td class="act"><b>金沢駅に各自集合</b><span>シンボルの鼓門でお出迎え</span></td></tr>
+        <tr><td class="time">午後</td><td class="act"><b>ホテルへ移動・チェックイン</b><span>荷物を置いて夕方まで自由行動</span></td></tr>
+        <tr><td class="time">17:30〜18:00頃</td><td class="act"><b>近江町市場周辺で集合</b><span>活気ある市場をぶらり</span></td></tr>
+        <tr><td class="time">夜（2〜3h）</td><td class="act"><b>夕食</b><span>旬彩和食 口福 ／ 活魚 市の蔵（座敷席予約予定・赤ちゃん連れ配慮）</span></td></tr>
+        <tr class="dayrow"><td colspan="2">DAY 02 — 知と、風情の街歩き</td></tr>
+        <tr><td class="time">10:00頃</td><td class="act"><b>石川県立図書館に集合・見学</b><span>円形劇場のような圧巻の空間</span></td></tr>
+        <tr><td class="time">昼食</td><td class="act"><b>金沢カレー</b><span>移動経路で適切な店舗を検討</span></td></tr>
+        <tr><td class="time">午後</td><td class="act"><b>ひがし茶屋街</b><span>カフェ・写真撮影・観光・お土産購入</span></td></tr>
+        <tr><td class="time">15:00〜16:00頃</td><td class="act"><b>現地解散</b><span>夜は各自自由行動</span></td></tr>
+        <tr class="dayrow"><td colspan="2">DAY 03 — 自由行動・名所めぐり</td></tr>
+        <tr><td class="time">終日</td><td class="act"><b>名所をめぐる</b><span>兼六園／金沢城／金沢21世紀美術館／長町武家屋敷跡／近江町市場／忍者寺 など</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 <!-- DAY 1 -->
 <section id="day1">
@@ -189,12 +235,12 @@
     <p>気の向くままに、金沢を代表するスポットへ。</p>
   </div>
   <div class="grid">
-    <div class="card reveal"><div class="ph"><span class="tag">庭園</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kenrokuen_linterna_fall.JPG/1920px-Kenrokuen_linterna_fall.JPG" alt="兼六園"></div><div class="body"><h3>兼六園</h3><p>日本三名園のひとつ。徽軫灯籠が象徴。</p><a href="https://www.kanazawa-tourism.com/spot/kenrokuen/" target="_blank" rel="noopener">詳しく見る</a></div></div>
-    <div class="card reveal d1"><div class="ph"><span class="tag">歴史</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/20190705_Kanazawa_Castle-1.jpg/1920px-20190705_Kanazawa_Castle-1.jpg" alt="金沢城"></div><div class="body"><h3>金沢城</h3><p>加賀百万石の象徴。白い海鼠塀が美しい。</p><a href="https://www.kanazawa-tourism.com/spot/kanazawajo/" target="_blank" rel="noopener">詳しく見る</a></div></div>
-    <div class="card reveal d2"><div class="ph"><span class="tag">アート</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/21st_Century_Museum_of_Contemporary_Art%2C_Kanazawa011.jpg/1920px-21st_Century_Museum_of_Contemporary_Art%2C_Kanazawa011.jpg" alt="金沢21世紀美術館"></div><div class="body"><h3>金沢21世紀美術館</h3><p>「スイミング・プール」で有名な現代アート。</p><a href="https://www.kanazawa-tourism.com/spot/21seikibijutsukan/" target="_blank" rel="noopener">詳しく見る</a></div></div>
-    <div class="card reveal"><div class="ph"><span class="tag">街並み</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nagamachi_samurai_district.jpg/1920px-Nagamachi_samurai_district.jpg" alt="長町武家屋敷跡"></div><div class="body"><h3>長町武家屋敷跡</h3><p>土塀が続く、歴史的な街並み。</p><a href="https://www.kanazawa-tourism.com/spot/nagachibukeyashiki/" target="_blank" rel="noopener">詳しく見る</a></div></div>
-    <div class="card reveal d1"><div class="ph"><span class="tag">市場</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Kanazawa_fish_market.jpg/1920px-Kanazawa_fish_market.jpg" alt="近江町市場"></div><div class="body"><h3>近江町市場</h3><p>金沢の台所。食べ歩き＆お土産に。</p><a href="https://www.kanazawa-tourism.com/spot/omycho-ichiba/" target="_blank" rel="noopener">詳しく見る</a></div></div>
-    <div class="card reveal d2"><div class="ph"><span class="tag">文化体験</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Myoryu-ji_Temple.jpg/1920px-Myoryu-ji_Temple.jpg" alt="忍者寺 妙立寺"></div><div class="body"><h3>忍者寺（妙立寺）</h3><p>仕掛け満載のからくり寺。要予約。</p><a href="https://search.yahoo.co.jp/search?p=忍者寺+妙立寺+金沢" target="_blank" rel="noopener">詳しく見る</a></div></div>
+    <div class="card reveal"><div class="ph"><span class="tag">庭園</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kenrokuen_linterna_fall.JPG/1920px-Kenrokuen_linterna_fall.JPG" alt="兼六園"></div><div class="body"><h3>兼六園</h3><p>日本三名園のひとつ。徽軫灯籠が象徴。</p><a href="https://www.pref.ishikawa.jp/siro-niwa/kenrokuen/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    <div class="card reveal d1"><div class="ph"><span class="tag">歴史</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/20190705_Kanazawa_Castle-1.jpg/1920px-20190705_Kanazawa_Castle-1.jpg" alt="金沢城"></div><div class="body"><h3>金沢城</h3><p>加賀百万石の象徴。白い海鼠塀が美しい。</p><a href="https://www.pref.ishikawa.jp/siro-niwa/kanazawajou/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    <div class="card reveal d2"><div class="ph"><span class="tag">アート</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/21st_Century_Museum_of_Contemporary_Art%2C_Kanazawa011.jpg/1920px-21st_Century_Museum_of_Contemporary_Art%2C_Kanazawa011.jpg" alt="金沢21世紀美術館"></div><div class="body"><h3>金沢21世紀美術館</h3><p>「スイミング・プール」で有名な現代アート。</p><a href="https://www.kanazawa21.jp/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    <div class="card reveal"><div class="ph"><span class="tag">街並み</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nagamachi_samurai_district.jpg/1920px-Nagamachi_samurai_district.jpg" alt="長町武家屋敷跡"></div><div class="body"><h3>長町武家屋敷跡</h3><p>土塀が続く、歴史的な街並み。</p><a href="https://www.kanazawa-kankoukyoukai.or.jp/spot/detail_10195.html" target="_blank" rel="noopener">公式情報</a></div></div>
+    <div class="card reveal d1"><div class="ph"><span class="tag">市場</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Kanazawa_fish_market.jpg/1920px-Kanazawa_fish_market.jpg" alt="近江町市場"></div><div class="body"><h3>近江町市場</h3><p>金沢の台所。食べ歩き＆お土産に。</p><a href="https://ohmicho-ichiba.com/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    <div class="card reveal d2"><div class="ph"><span class="tag">文化体験</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Myoryu-ji_Temple.jpg/1920px-Myoryu-ji_Temple.jpg" alt="忍者寺 妙立寺"></div><div class="body"><h3>忍者寺（妙立寺）</h3><p>仕掛け満載のからくり寺。要予約。</p><a href="https://www.kanazawa-kankoukyoukai.or.jp/spot/detail_50022.html" target="_blank" rel="noopener">公式情報</a></div></div>
   </div>
 </section>
 
@@ -206,11 +252,11 @@
     <p>海の幸から地元の味まで。金沢で味わいたい一皿。</p>
   </div>
   <div class="eat">
-    <div class="e reveal"><h3>まいもん寿司</h3><p>新鮮な海鮮寿司</p><a href="https://www.maimon-sushi.com/" target="_blank" rel="noopener">サイトを見る →</a></div>
-    <div class="e reveal d1"><h3>魚がし食堂</h3><p>美味しい海鮮丼</p><a href="https://search.yahoo.co.jp/search?p=魚がし食堂+金沢" target="_blank" rel="noopener">検索する →</a></div>
-    <div class="e reveal d2"><h3>いたる</h3><p>ノドグロなど海鮮居酒屋</p><a href="https://search.yahoo.co.jp/search?p=いたる+金沢" target="_blank" rel="noopener">検索する →</a></div>
-    <div class="e reveal"><h3>焼き鳥の秋吉</h3><p>人気の焼き鳥店</p><a href="https://www.akiyoshi.co.jp/" target="_blank" rel="noopener">サイトを見る →</a></div>
-    <div class="e reveal d1"><h3>金沢おでん</h3><p>地元の味覚</p><a href="https://search.yahoo.co.jp/search?p=金沢おでん+人気" target="_blank" rel="noopener">検索する →</a></div>
+    <div class="e reveal"><h3>金沢まいもん寿司</h3><p>地物にこだわる回転寿司の名店。新鮮な海鮮握り。</p><a href="https://www.maimon-susi.com/" target="_blank" rel="noopener">公式サイト →</a></div>
+    <div class="e reveal d1"><h3>魚がし食堂</h3><p>市場直送の海鮮丼・定食をお手頃価格で。</p><a href="https://tabelog.com/ishikawa/A1701/A170101/17013793/" target="_blank" rel="noopener">食べログ →</a></div>
+    <div class="e reveal d2"><h3>酒と人情料理 いたる 本店</h3><p>ノドグロなど地物の鮮魚と地酒が自慢の人気居酒屋。</p><a href="https://nodoguro-itaru.com/" target="_blank" rel="noopener">公式サイト →</a></div>
+    <div class="e reveal"><h3>焼鳥 秋吉 金沢店</h3><p>串焼きが名物の、賑やかで人気の焼き鳥店。</p><a href="https://www.akiyoshi.co.jp/" target="_blank" rel="noopener">公式サイト →</a></div>
+    <div class="e reveal d1"><h3>金澤おでん 赤玉 本店</h3><p>昭和2年創業。金沢おでんを代表する老舗。</p><a href="https://www.oden-akadama.com/" target="_blank" rel="noopener">公式サイト →</a></div>
   </div>
 </section>
 
